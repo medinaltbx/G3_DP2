@@ -1,2 +1,6 @@
 # G3_DP2
-Data Project 2 - Master Data Analytics EDEM
+##Data Project 2 - Master Data Analytics EDEM
+
+# Ideas
+
+- Smart parking system:
