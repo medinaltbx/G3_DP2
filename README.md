@@ -1,5 +1,6 @@
 # G3_DP2
-## Data Project 2 - IoT 
+## Data Project 2 IoT - Master Data Analytics EDEM 2022
+Poner el Logo de la empresa
 
 ## Meet our team
 
@@ -10,6 +11,9 @@
 - [Jose Luis Rodriguez](https://github.com/joselra98)
 - [Alejandro Pérez](https://github.com/AlexPC23)
 
+## Proyecto
+ Descripción del proyecto y objetivos
+ 
 ## Ideas
 
 - **Smart parking system**:
