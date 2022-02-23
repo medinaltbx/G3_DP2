@@ -11,8 +11,6 @@ Poner el Logo de la empresa
 - [Jose Luis Rodriguez](https://github.com/joselra98)
 - [Alejandro Pérez](https://github.com/AlexPC23)
 
-## Proyecto
- Descripción del proyecto y objetivos
  
 ## Ideas
 * **Smart Parking System:**
@@ -33,3 +31,6 @@ Poner el Logo de la empresa
     * Nombre y logo -- Malena
         - aParkApp
     * Definición/Justificación del producto frente a competidores. -- Alex, Laura
+
+## Mockup de arquitectura
+![](images/DP2_arquitectura.jpeg)
