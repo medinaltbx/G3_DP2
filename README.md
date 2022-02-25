@@ -1,7 +1,7 @@
 # G3_DP2
 ## Data Project 2 IoT - Master Data Analytics EDEM 2022
 | ![](https://github.com/medinaltbx/G3_DP2/blob/main/images/whitelogo.png)
-| ------------------------------------------------------------ | :----------------------------------------------------------: |
+
 
 ## Meet our team
 
