@@ -6,7 +6,7 @@ Poner el Logo de la empresa
 
 - [Laura Macías](https://github.com/LauraMacias)
 - [Cristian Medina](hhttps://github.com/medinaltbx)
-- [Malena Martin]()
+- [Malena Martin](https://github.com/MalenaMDH)
 - [Miguel Ruiz](https://github.com/miruimi)
 - [Jose Luis Rodriguez](https://github.com/joselra98)
 - [Alejandro Pérez](https://github.com/AlexPC23)
