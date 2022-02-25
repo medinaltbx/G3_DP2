@@ -1,0 +1,13 @@
+## Datos Sensor
+
+- ID Parking 
+- Situación Sensor (Libre, Ocupado y Reservado)
+- Timestamp
+- Dimensión Plaza (XL, Normal y Pequeña)
+- Marca Coche
+- Matricula Coche
+- Tipo de Coches
+- Número de Plaza
+- Número de Planta 
+- Hora de Entrada
+- Hora de Salida 
