@@ -1,12 +1,13 @@
 # G3_DP2
 ## Data Project 2 IoT - Master Data Analytics EDEM 2022
-Poner el Logo de la empresa
+| ![](https://github.com/medinaltbx/G3_DP2/blob/main/images/whitelogo.png)
+
 
 ## Meet our team
 
 - [Laura Macías](https://github.com/LauraMacias)
 - [Cristian Medina](hhttps://github.com/medinaltbx)
-- [Malena Martin]()
+- [Malena Martin](https://github.com/MalenaMDH)
 - [Miguel Ruiz](https://github.com/miruimi)
 - [Jose Luis Rodriguez](https://github.com/joselra98)
 - [Alejandro Pérez](https://github.com/AlexPC23)
