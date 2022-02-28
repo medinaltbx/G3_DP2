@@ -20,20 +20,20 @@ Para ello hemos creado la empresa aParkAp, la cual, nace con la intención de da
 ## Ideas
 * **Smart Parking System:**
     * Duración del estacionamiento.
-    * Si el aparcamiento está completo, la puerta de entrada estará bloqueada.
-    * Los clientes del parking pueden acceder información de parkings disponibles y la predicción de disponibilidad futura. 
-    * Añadir sostenibilidad.
-    * Pago automático.
-    * Reserva de aparcamiento.
-    
-    
-- **TAREAS PRINCIPALES ANTES DEL DP SESION**:
-
-    * Mockup arquitectura cloud -- Cristian, Miguel 
-    * Idea de negocio -- Malena, Jose Luis 
-    * Target / Público objetivo -- Alex, Laura
-    * Financiació Costes -- Jose Luis, Malena
-    * Nombre y logo -- Malena
+      * Si el aparcamiento está completo, la puerta de entrada estará bloqueada.
+      * Los clientes del parking pueden acceder información de parkings disponibles y la predicción de disponibilidad futura. 
+      * Añadir sostenibilidad.
+      * Pago automático.
+      * Reserva de aparcamiento.
+      
+      
+  - **TAREAS PRINCIPALES ANTES DEL DP SESION**:
+  
+      * Mockup arquitectura cloud -- Cristian, Miguel 
+      * Idea de negocio -- Malena, Jose Luis 
+      * Target / Público objetivo -- Alex, Laura
+      * Financiació Costes -- Jose Luis, Malena
+      * Nombre y logo -- Malena
         - aParkApp
     * Definición/Justificación del producto frente a competidores. -- Alex, Laura
 
