@@ -55,7 +55,8 @@ cd G3_DP2
 pip install -U -r setup_dependencies.txt
 ```
 
+## Pub/Sub:
 
-
+1. A continuación prepararemos los dos topics sobre los que se transmitirán los mensajes.
 
 
