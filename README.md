@@ -55,8 +55,16 @@ cd G3_DP2
 pip install -U -r setup_dependencies.txt
 ```
 
-## Pub/Sub:
+## IoTCore:
 
-1. A continuación prepararemos los dos topics sobre los que se transmitirán los mensajes.
+Para la recepción y gestión de los mensajes emitidos por los diferentes sensores de aparcamiento físicos instalados en el parking usaremos [IoTCore]('https://cloud.google.com/iot-core'). En nuestro caso simularemos los datos emitidos por un solo parking.
+
+1.
+
+
+## Pub/Sub:
+A continuación prepararemos los dos topics sobre los que se transmitirán los mensajes. 
+
+1. En primer lugar crearemos el topic en el que los diferentes Nos dirigimos a [Pub/Sub]('https://cloud.google.com/pubsub)
 
 
