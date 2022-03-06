@@ -1,5 +1,5 @@
 #~#~#~#~# CREDENTIALS #~#~#~#~#
-project_id = CHANGE
+project_id = aparkapp-343018
 bucket_name = iot-cloud-storage-parking
 
 #~#~#~#~# IOT BINDING #~#~#~#~#

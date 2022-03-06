@@ -30,3 +30,32 @@ Para ello hemos creado la empresa aParkAp, la cual, nace con la intención de da
 
 ![img.png](images/new_project.png)
 
+3. Accedemos al shell de google cloud y clonamos el repositorio:
+```
+git clone https://github.com/medinaltbx/G3_DP2.git
+```
+
+4. Una vez clonado el repositorio, activamos todas las APIs que utilizaremos más adelante. Esto sólo será necesario hacerlo una vez:
+```
+gcloud services enable dataflow.googleapis.com
+gcloud services enable cloudiot.googleapis.com
+gcloud services enable cloudbuild.googleapis.com
+```
+
+5. Al finalizar la instalación, creamos un entorno virtual sobre el que instalaremos las dependencias necesarias:
+```
+virtualenv -p python3 parking
+source parking/bin/activate
+```
+
+6. Accedemos al proyecto e instalamos las librerías:
+
+```
+cd G3_DP2
+pip install -U -r setup_dependencies.txt
+```
+
+
+
+
+
