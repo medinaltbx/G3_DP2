@@ -1,6 +1,6 @@
 # G3_DP2
 ## Data Project 2 IoT - Master Data Analytics EDEM 2022
-| ![](https://github.com/medinaltbx/G3_DP2/blob/main/images/whitelogo.png)
+ ![](https://github.com/medinaltbx/G3_DP2/blob/main/images/whitelogo.png)
 
 
 ## Meet our team
@@ -18,28 +18,15 @@ El proyecto tiene como objetivo principal la creación de un producto relacionad
 
 Para ello hemos creado la empresa aParkAp, la cual, nace con la intención de dar a todos sus usuarios una mayor facilidad y agilidad a la hora de buscar aparcamientos en los diferentes parkings del territorio de valencia, y de desarrollar una solución Power BI par las empresas gestoras de estos establecimientos con las que poder controlar y tomar decisiones de forma más sencilla sobre su negocio. 
 
-## Ideas
-* **Smart Parking System:**
-    * Duración del estacionamiento.
-      * Si el aparcamiento está completo, la puerta de entrada estará bloqueada.
-      * Los clientes del parking pueden acceder información de parkings disponibles y la predicción de disponibilidad futura. 
-      * Añadir sostenibilidad.
-      * Pago automático.
-      * Reserva de aparcamiento.
-      
-      
-  - **TAREAS PRINCIPALES ANTES DEL DP SESION**:
-  
-      * Mockup arquitectura cloud -- Cristian, Miguel 
-      * Idea de negocio -- Malena, Jose Luis 
-      * Target / Público objetivo -- Alex, Laura
-      * Financiació Costes -- Jose Luis, Malena
-      * Nombre y logo -- Malena
-        - aParkApp
-    * Definición/Justificación del producto frente a competidores. -- Alex, Laura
+## Estructura del proyecto:
+```bash
+```
 
-## Mockup de arquitectura
-![](images/DP2_arquitectura.jpeg)
+## Prerrequisitos:
 
-## Mockup del negocio
-![]()
+1. En primer lugar, deberemos contar con una [cuenta de GCP](https://cloud.google.com/free/?utm_source=google&utm_medium=cpc&utm_campaign=emea-none-all-none-dr-sitelink-all-all-trial-e-gcp-1011340&utm_content=text-ad-none-any-DEV_c-CRE_526889180785-ADGP_Hybrid%20%7C%20BKWS%20-%20EXA%20%7C%20Txt%20~%20GCP%20~%20General%23v2-KWID_43700060384861660-aud-606988878894%3Akwd-87853815-userloc_1005545&utm_term=KW_gcp-ST_gcp-NET_g-&gclid=CjwKCAiA1JGRBhBSEiwAxXblweeQL5m3raLU4_MpexJyCDpQMEF2bM5NzEcUx7MFyTD0nneu2jC3kRoCs5wQAvD_BwE&gclsrc=aw.ds).
+
+2. Creamos un nuevo proyecto, en nuestro caso se llamará aParkApp:
+
+![img.png](images/new_project.png)
+
