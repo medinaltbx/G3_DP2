@@ -33,7 +33,6 @@ def parse_json_message(message):
     # Convert string decoded in json format(element by element)
 
     row = json.loads(pubsubmessage)
-    logging.info(" ################ MENSAJITO json: %s ################: ", row)
 
     # Return function
     return row
@@ -44,17 +43,9 @@ class parse_json(beam.DoFn):
         output_json = json.dumps(element)
         yield output_json.encode('utf-8')
 
-# class filter_departures(beam.DoFn):
-#     def process(self, element):
-#         if (element['status'] == 'salida'):
-#             yield element
-#         else:
-#             yield element
-
-
 # Create Beam pipeline
 
-def edemData(output_table, project_id):
+def parkingData(output_table, project_id):
     # Load schema from BigQuery/schemas folder
     with open(f"schemas/{output_table}.json") as file:
         input_schema = json.load(file)
@@ -80,7 +71,7 @@ def edemData(output_table, project_id):
         # Data to Bigquery
 
         (data | "Write to BigQuery" >> beam.io.WriteToBigQuery(
-            table=f"{project_id}:edemDataset.{output_table}",
+            table=f"{project_id}:parkingDataset.{output_table}",
             schema=schema,
             create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
             write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND
@@ -94,12 +85,7 @@ def edemData(output_table, project_id):
             | "WriteToPubSub" >> beam.io.WriteToPubSub(topic=f"projects/{project_id}/topics/IotToCloudFunctions", with_attributes=False)
          )
 
-        #(data
-        #    | "Filter messages" >> beam.Filter(lambda element: element['status'] == 'salida')
-        #    | "WriteToPubSub" >> beam.io.WriteToPubSub(topic=f"projects/{project_id}/topics/IotToCloudFunctions",
-        #                                                with_attributes=False)
-        #)
 
 if __name__ == '__main__':
     logging.getLogger().setLevel(logging.INFO)
-    edemData("iotToBigQuery", "dp2-test-342416")
+    parkingData("iotToBigQuery", "CHANGE")
