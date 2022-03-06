@@ -55,16 +55,21 @@ cd G3_DP2
 pip install -U -r setup_dependencies.txt
 ```
 
+## Pub/Sub:
+A continuación prepararemos los dos topics sobre los que se transmitirán los mensajes:
+* **iotToBigQuery:** Datos emitidos por los sensores de aparcamiento físicos.
+* **iotToCloudFunctions:** Datos a procesar para el cálculo de precio en Cloud Functions.
+
+1. En primer lugar crearemos el topic de recepción de mensajes en crudo. Nos dirigimos a [Pub/Sub]('https://cloud.google.com/pubsub) y presionamos "Crear tema". Introducimos "iotToBigQuery" y presionamos "crear tema" de nuevo.
+
+![img.png](iotToBigQuieryPubSub.png)
+
+2. Realizamos la misma operación para el topic "iotToCloudFunctions".
+
+
 ## IoTCore:
 
 Para la recepción y gestión de los mensajes emitidos por los diferentes sensores de aparcamiento físicos instalados en el parking usaremos [IoTCore]('https://cloud.google.com/iot-core'). En nuestro caso simularemos los datos emitidos por un solo parking.
 
 1.
-
-
-## Pub/Sub:
-A continuación prepararemos los dos topics sobre los que se transmitirán los mensajes. 
-
-1. En primer lugar crearemos el topic en el que los diferentes Nos dirigimos a [Pub/Sub]('https://cloud.google.com/pubsub)
-
 
