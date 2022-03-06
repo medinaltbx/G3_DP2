@@ -40,3 +40,6 @@ Para ello hemos creado la empresa aParkAp, la cual, nace con la intención de da
 
 ## Mockup de arquitectura
 ![](images/DP2_arquitectura.jpeg)
+
+## Mockup del negocio
+![]()
