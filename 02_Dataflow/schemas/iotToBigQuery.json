@@ -1,0 +1,34 @@
+{
+    "fields": [
+    {
+      "mode": "NULLABLE",
+      "name": "parking_id",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "timeStamp",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "status",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "combustible",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "marca",
+      "type": "STRING"
+    },
+    {
+      "mode": "NULLABLE",
+      "name": "matricula",
+      "type": "STRING"
+    }
+    ]
+}

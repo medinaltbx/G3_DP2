@@ -1,0 +1,58 @@
+#~#~#~#~# CREDENTIALS #~#~#~#~#
+project_id = dp2-test-342416
+bucket_name = iot-cloud-storage-test
+
+#~#~#~#~# IOT BINDING #~#~#~#~#
+SSH KEY = openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused"
+
+#~#~#~#~# LOGGING #~#~#~#~#
+source edem/bin/activate
+cd DP2_test/02_Dataflow/
+
+gcloud builds submit --tag 'gcr.io/dp2-test-342416/dataflow/edem:latest' .
+
+gcloud dataflow flex-template build "gs://iot-cloud-storage-test/dataflowtemplate.json" \
+  --image "gcr.io/dp2-test-342416/dataflow/edem:latest" \
+  --sdk-language "PYTHON" 
+
+gcloud dataflow flex-template run "edem-dataflow-job" \
+    --template-file-gcs-location "gs://iot-cloud-storage-test/dataflowtemplate.json" \
+    --region "europe-west1"
+
+#~#~#~#~# IOT LAUNCH #~#~#~#~#
+
+cd ../01_IoTCore/
+
+python edemDeviceData.py \
+    --algorithm RS256 \
+    --cloud_region europe-west1 \
+    --device_id parking1 \
+    --private_key_file rsa_private.pem \
+    --project_id dp2-test-342416 \
+    --registry_id edemRegistry
+
+#~#~#~#~# BD SETUP #~#~#~#~#
+# IotToBigQuery
+parking_id:STRING,
+timeStamp:STRING,
+status:STRING,
+combustible:STRING,
+marca:STRING,
+matricula:STRING
+
+# STATUS
+parking_id:STRING,
+arrival_time:STRING,
+departure_time:STRING,
+total_time:STRING,
+combustible:STRING,
+marca:STRING,
+matricula:STRING,
+precio:FLOAT
+
+#~#~#~#~# REQUIREMENTS #~#~#~#~#
+pandas
+google-cloud-logging
+google-cloud-bigquery
+datetime
+pyarrow
