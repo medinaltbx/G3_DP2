@@ -97,3 +97,16 @@ Copiamos lo mostrado, lo pegamos en el campo "Valor de la clave pública" y puls
 
 ## Cloud Storage:
 
+Debemos preparar un entorno que nos permita guardar los templates de Google Dataflow. Para ello recurriremos a un bucket de Cloud Storage.
+
+1. Accedemos a la página de [Google Storage]('https://console.cloud.google.com/storage/browser) y presionamos "Crear Bucket".
+
+2. Lo llamaremos como nos plazca ya que el identificador ha de ser único. En nuestro caso lo nombramos "iot-cloud-storage-parking".
+
+3. Seleccionamos "Multi-region" y "eu" en los campos de "Ubicación" y "Tipo de ubicación" respectivamente y presionamos "Crear".
+
+## Dataflow:
+
+Utilizaremos [Google Dataflow]('https://cloud.google.com/dataflow') para definir las pipelines de adquisición y transformación de datos.
+
+1. Accedemos al modo editor de
