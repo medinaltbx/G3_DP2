@@ -26,8 +26,8 @@ def calculate_time(event, context):
 
     if message['status'] == 'salida':
         print('MESSAge: ', message)
-        TABLE_READ = "`dp2-test-342416.edemDataset.iotToBigQuery`"
-        TABLE_DESTINATION ="dp2-test-342416.edemDataset.status"
+        TABLE_READ = "CHANGE.parkingDataset.iotToBigQuery"
+        TABLE_DESTINATION ="CHANGE.parkingDataset.status"
 
         def parse_time(timestamp):
             return datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S.%f')
@@ -37,7 +37,7 @@ def calculate_time(event, context):
         # Construct a BigQuery client object.
         client = bigquery.Client()
         """ READ BIGQUERY STATUS"""
-        q = f"""SELECT * FROM {TABLE_READ} WHERE parking_id = '{message['parking_id']}' AND status = 'llegada'"""
+        q = f"""SELECT * FROM `{TABLE_READ}` WHERE parking_id = '{message['parking_id']}' AND status = 'llegada'"""
         df = (client.query(q).result().to_dataframe())
 
         """ GET LAST ARRIVAL """

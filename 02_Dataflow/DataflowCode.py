@@ -89,6 +89,7 @@ def edemData(output_table, project_id):
         # Part03: Filter and publish data
 
         (data
+            | "Filter messages" >> beam.Filter(lambda element: element['status'] == 'salida')
             | "Parse JSON" >> beam.ParDo(parse_json())
             | "WriteToPubSub" >> beam.io.WriteToPubSub(topic=f"projects/{project_id}/topics/IotToCloudFunctions", with_attributes=False)
          )
