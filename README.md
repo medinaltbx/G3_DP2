@@ -109,4 +109,25 @@ Debemos preparar un entorno que nos permita guardar los templates de Google Data
 
 Utilizaremos [Google Dataflow]('https://cloud.google.com/dataflow') para definir las pipelines de adquisición y transformación de datos.
 
-1. Accedemos al modo editor de
+1. Accedemos al modo editor de la consola cloud y abrimos el archivo 02_Dataflow/DataflowCode.py.
+
+
+2. En la última línea de código, es necesario introducir el id del proyecto actual en la zona indicada en la imagen inferior. En caso de dejar el mostrado no funcionará:
+
+![](images/dataflow1.png)
+
+Nos aseguramos de guardar los cambios y volvemos a la terminal pulsando "Abrir terminal".
+
+3. Nos dirigimos a la carpeta /G3_DP2/02_Dataflow y ejecutamos los siguientes comandos, completándolos pertinentemente:
+
+```
+gcloud builds submit --tag 'gcr.io/<TU_ID_DE_PROYECTO>/dataflow/parking:latest' .
+
+gcloud dataflow flex-template build "gs://<TU_ID_DE_BUCKET>/dataflowtemplate.json" \
+  --image "gcr.io/<TU_ID_DE_PROYECTO>/dataflow/parking:latest" \
+  --sdk-language "PYTHON" 
+
+gcloud dataflow flex-template run "parking-dataflow-job" \
+    --template-file-gcs-location "gs://<TU_ID_DE_BUCKET>/dataflowtemplate.json" \
+    --region "europe-west1"
+```
