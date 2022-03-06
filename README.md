@@ -62,14 +62,18 @@ A continuación prepararemos los dos topics sobre los que se transmitirán los m
 
 1. En primer lugar crearemos el topic de recepción de mensajes en crudo. Nos dirigimos a [Pub/Sub]('https://cloud.google.com/pubsub) y presionamos "Crear tema". Introducimos "iotToBigQuery" y presionamos "crear tema" de nuevo.
 
-![img.png](iotToBigQuieryPubSub.png)
+![img.png](images/iotToBigQuieryPubSub.png)
 
 2. Realizamos la misma operación para el topic "iotToCloudFunctions".
 
 
 ## IoTCore:
 
-Para la recepción y gestión de los mensajes emitidos por los diferentes sensores de aparcamiento físicos instalados en el parking usaremos [IoTCore]('https://cloud.google.com/iot-core'). En nuestro caso simularemos los datos emitidos por un solo parking.
+Para la recepción y gestión de los mensajes emitidos por los diferentes sensores de aparcamiento físicos instalados en los diferentes aparcamientos usaremos [IoT Core]('https://cloud.google.com/iot-core'). En nuestro caso simularemos los datos emitidos por un solo parking.
 
-1.
+1. Nos dirigimos a la página de IoT Core y pulsamos "Crear registro". En ella, seleccionamos los siguientes campos:
+* **ID del registro:** parkingRegistry
+* **Región:** europe-west1
+* **Temas de Cloud Pub/Sub**: projects/INTRODUCIR_TU_ID_DE_PROYECTO/topics/iotToBigQuery
 
+![img.png](images/iotCore1.png)
