@@ -3,20 +3,20 @@ project_id = aparkapp-343018
 bucket_name = iot-cloud-storage-parking
 
 #~#~#~#~# IOT BINDING #~#~#~#~#
-SSH KEY = openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused"
+openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused"
 
 #~#~#~#~# LOGGING #~#~#~#~#
 source parking/bin/activate
 cd DP2_test/02_Dataflow/
 
-gcloud builds submit --tag 'gcr.io/CHANGE/dataflow/parking:latest' .
+gcloud builds submit --tag 'gcr.io/aparkapp-343018/dataflow/parking:latest' .
 
-gcloud dataflow flex-template build "gs://iot-cloud-storage-test/dataflowtemplate.json" \
+gcloud dataflow flex-template build "gs://iot-cloud-storage-parking/dataflowtemplate.json" \
   --image "gcr.io/CHANGE/dataflow/parking:latest" \
   --sdk-language "PYTHON" 
 
 gcloud dataflow flex-template run "parking-dataflow-job" \
-    --template-file-gcs-location "gs://iot-cloud-storage-test/dataflowtemplate.json" \
+    --template-file-gcs-location "gs://iot-cloud-storage-parking/dataflowtemplate.json" \
     --region "europe-west1"
 
 #~#~#~#~# IOT LAUNCH #~#~#~#~#

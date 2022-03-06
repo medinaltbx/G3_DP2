@@ -12,7 +12,7 @@
 - [Jose Luis Rodriguez](https://github.com/joselra98)
 - [Alejandro Pérez](https://github.com/AlexPC23)
 
-## Proyecto
+## Descripción
 
 El proyecto tiene como objetivo principal la creación de un producto relacionado con el mundo IOT, en el que, la solución sea escalable, open source y cloud. 
 
@@ -77,3 +77,23 @@ Para la recepción y gestión de los mensajes emitidos por los diferentes sensor
 * **Temas de Cloud Pub/Sub**: projects/INTRODUCIR_TU_ID_DE_PROYECTO/topics/iotToBigQuery
 
 ![img.png](images/iotCore1.png)
+
+2. A continuación, nos desplazamos a la pestaña de dispositivos y pulsamos "Crear un dispositivo". Lo llamamos "parking1" y pulsamos "Comunicación, cloud logging y autenticación". En "Formato de clave pública" seleccionamos 
+RS256_X509.
+
+
+3. En el cloud shell, nos dirigimos a la carpeta G3_DP2/01_IoTCore e introducimos el siguiente comando:
+```
+openssl req -x509 -nodes -newkey rsa:2048 -keyout rsa_private.pem -out rsa_cert.pem -subj "/CN=unused"
+```
+
+4. Mostramos el contenido del archivo rsa_cert.pem por consola:
+```
+cat rsa_cert.pem
+```
+Copiamos lo mostrado, lo pegamos en el campo "Valor de la clave pública" y pulsamos "Crear".
+
+![img.png](images/iotCore2.png)
+
+## Cloud Storage:
+
