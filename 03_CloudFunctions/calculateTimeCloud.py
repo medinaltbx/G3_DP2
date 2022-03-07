@@ -26,8 +26,8 @@ def calculate_time(event, context):
 
     if message['status'] == 'salida':
         print('MESSAge: ', message)
-        TABLE_READ = "CHANGE.parkingDataset.iotToBigQuery"
-        TABLE_DESTINATION ="CHANGE.parkingDataset.status"
+        TABLE_READ = "aparkapp-343018.parkingDataset.iotToBigQuery"
+        TABLE_DESTINATION ="aparkapp-343018.parkingDataset.status"
 
         def parse_time(timestamp):
             return datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S.%f')

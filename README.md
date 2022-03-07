@@ -156,6 +156,9 @@ Pulsamos "Guardar" y "Siguiente".
 
 ![img.png](images/cloud_functions2.png)
 
+#### MUY IMPORTANTE: Es necesario cambiar el identificador del proyecto DENTRO del código. Concretamente en las líneas 29 y 30:
+![img_1.png](images/cloud_functions_project_id.png)
+
 3. Por último, ingresamos las siguientes librerías dentro del archivo requirements.txt y pulsamos "Implementar":
 
 ```
@@ -184,3 +187,14 @@ python parkingDeviceData.py \
 
 2. Ejecutamos el comando y debemos observar unos mensajes por pantalla como los siguientes:
 
+![img.png](images/iot_messages.png)
+
+3. Dejamos que emita varios mensajes y nos dirigimos a Big Query para comprobar que todo se está ejecutando correctamente:
+
+* **iotToBigQuery**:
+
+![img.png](images/iottoBigQuery_BQ.png)
+
+* **status:**
+
+![img.png](images/status_BQ.png)
