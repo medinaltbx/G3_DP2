@@ -131,3 +131,56 @@ gcloud dataflow flex-template run "parking-dataflow-job" \
     --template-file-gcs-location "gs://<TU_ID_DE_BUCKET>/dataflowtemplate.json" \
     --region "europe-west1"
 ```
+
+Si todo ha ido bien, en este punto Dataflow ya se encuentra preparado para recibir mensajes de los dispositivos. Observaremos un gráfico de flujo de ejecución como el siguiente:
+
+![img.png](images/dataflow_flujo.png)
+
+## Cloud Functions:
+
+Para la lógica de control de salidas y precios utilizaremos [Google Cloud Functions]("https://console.cloud.google.com/functions/list").
+
+1. Nos dirigimos a la página de Cloud Functions y presionamos "Crear función". Rellenaremos los campos como observamos en la imagen siguiente:
+
+* **Nombre de la función**: calculate_time
+* **Región:** europe-west1
+* **Activador:** Cloud Pub/Sub -->
+    projects/aparkapp-343018/topics/iotToCloudFunctions
+
+
+![img.png](images/cloud_functions1.png)
+
+Pulsamos "Guardar" y "Siguiente".
+
+2. A continuación deberemos seleccionar Python 3.7 en el desplegable "Entorno de ejecución" e ingresar "calculate_time" en el campo "Punto de entrada". Posteriormente, copiamos el código ubicado en G3_DP2/03_CloudFunctions/calculateTimeCloud.py dentro del campo editable:
+
+![img.png](images/cloud_functions2.png)
+
+3. Por último, ingresamos las siguientes librerías dentro del archivo requirements.txt y pulsamos "Implementar":
+
+```
+pandas
+google-cloud-logging
+google-cloud-bigquery
+datetime
+pyarrow
+```
+
+En caso de que no haya ocurrido ningún error durante la implementación de la función, en este punto ya está todo listo para lanzar nuestro sistema a tiempo real.
+
+
+## Ejecución:
+
+1. Desde la terminal nos dirigimos a la carpeta 01_IoTCore. En ella, introducimos el siguiente comando cambiando aquellos campos necesarios:
+```
+python parkingDeviceData.py \
+    --algorithm RS256 \
+    --cloud_region europe-west1 \
+    --device_id parking1 \
+    --private_key_file rsa_private.pem \
+    --project_id <TU_ID_DE_PROYECTO> \
+    --registry_id parkingRegistry
+```
+
+2. Ejecutamos el comando y debemos observar unos mensajes por pantalla como los siguientes:
+
