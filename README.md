@@ -19,7 +19,44 @@ El proyecto tiene como objetivo principal la creación de un producto relacionad
 Para ello hemos creado la empresa aParkAp, la cual, nace con la intención de dar a todos sus usuarios una mayor facilidad y agilidad a la hora de buscar aparcamientos en los diferentes parkings del territorio de valencia, y de desarrollar una solución Power BI par las empresas gestoras de estos establecimientos con las que poder controlar y tomar decisiones de forma más sencilla sobre su negocio. 
 
 ## Estructura del proyecto:
-```bash
+```
+├───.idea
+    │   README.md
+    │   setup_dependencies.txt
+    │
+    ├───.idea
+    │   │   .gitignore
+    │   │   Datos Sensor
+    │   │   G3_DP2.iml
+    │   │   misc.xml
+    │   │   modules.xml
+    │   │   Parámetros Power BI
+    │   │   vcs.xml
+    │   │   workspace.xml
+    │   │
+    │   └───inspectionProfiles
+    │           profiles_settings.xml
+    │           Project_Default.xml
+    │
+    ├───01_IoTCore
+    │       parkingDeviceData.py
+    │
+    ├───02_Dataflow
+    │   │   DataflowCode.py
+    │   │   Dockerfile
+    │   │   requirements.txt
+    │   │
+    │   └───schemas
+    │           iotToBigQuery.json
+    │
+    ├───03_CloudFunctions
+    │       calculateTimeCloud.py
+    │       requirements.txt
+    │
+    ├───images
+    │
+    └───info
+            useful.txt
 ```
 
 ## Prerrequisitos:
