@@ -90,7 +90,7 @@ A continuación prepararemos los dos topics sobre los que se transmitirán los m
 2. Realizamos la misma operación para el topic "iotToCloudFunctions".
 
 
-## IoTCore:
+## IoT Core:
 
 Para la recepción y gestión de los mensajes emitidos por los diferentes sensores de aparcamiento físicos instalados en los diferentes aparcamientos usaremos [IoT Core]('https://cloud.google.com/iot-core'). En nuestro caso simularemos los datos emitidos por un solo parking.
 
