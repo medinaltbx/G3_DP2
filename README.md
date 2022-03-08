@@ -20,29 +20,28 @@ Para ello hemos creado la empresa aParkAp, la cual, nace con la intención de da
 
 ## Estructura del proyecto:
 ```
-├───.idea
-    │   README.md
-    │   setup_dependencies.txt          # Librerías necesarias para el entorno virtual
-    │
-    ├───01_IoTCore
-    │       parkingDeviceData.py        # Emulador de datos IoT
-    │
-    ├───02_Dataflow
-    │   │   DataflowCode.py             # Código de ejecución para la pipeline
-    │   │   Dockerfile                  # Archivo de creación de la imagen template
-    │   │   requirements.txt            # Librerías necesarias para el contenedor
-    │   │
-    │   └───schemas
-    │           iotToBigQuery.json      # Archivo con esquema de datos IoT
-    │
-    ├───03_CloudFunctions
-    │       calculateTimeCloud.py       # Lógica de calculo de tiempos y precios
-    │       requirements.txt            # Librerías necesarias en Cloud Functions
-    │
-    ├───images
-    │
-    └───info
-            useful.txt                  # Archivo de texto con diferentes comandos útiles
+│   README.md
+│   setup_dependencies.txt          # Librerías necesarias para el entorno virtual
+│
+├───01_IoTCore
+│       parkingDeviceData.py        # Emulador de datos IoT
+│
+├───02_Dataflow
+│   │   DataflowCode.py             # Código de ejecución para la pipeline
+│   │   Dockerfile                  # Archivo de creación de la imagen template
+│   │   requirements.txt            # Librerías necesarias para el contenedor
+│   │
+│   └───schemas
+│           iotToBigQuery.json      # Archivo con esquema de datos IoT
+│
+├───03_CloudFunctions
+│       calculateTimeCloud.py       # Lógica de calculo de tiempos y precios
+│       requirements.txt            # Librerías necesarias en Cloud Functions
+│
+├───images
+│
+└───info
+        useful.txt                  # Archivo de texto con diferentes comandos útiles
 ```
 
 ## Prerrequisitos:
