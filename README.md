@@ -38,7 +38,7 @@ Para ello hemos creado la empresa aParkApp, la cual, nace con la intención de d
 │       calculateTimeCloud.py       # Lógica de calculo de tiempos y precios
 │       requirements.txt            # Librerías necesarias en Cloud Functions
 │
-├───images
+├───images                          # Imágenes usadas en README.md
 │
 └───info
         useful.txt                  # Archivo de texto con diferentes comandos útiles
